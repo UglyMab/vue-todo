@@ -157,9 +157,11 @@ const filterChange = (val) => {
   filter.value = val
 }
 const clearCompleted = () => {
+  filter.value = 'All'
   todos.value = todos.value.filter((t) => t.done === false)
 }
 const checkAll = () => {
+  filter.value = 'All'
   todos.value = todos.value.map((t) => {
     return { ...t, done: true }
   })
